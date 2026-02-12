@@ -1,0 +1,13 @@
+let nome = 'Davi';
+const titulo = document.querySelector('.titulo');
+const fundoPagina = document.querySelector('.fundopagina');
+const paragrafo = document.querySelector('.data');
+const fundoData = document.querySelector('.fundodata');
+titulo.textContent += nome;
+titulo.style.fontSize = '100px';
+titulo.style.color = "#fff"
+paragrafo.textContent += '09/02/2026'
+paragrafo.style.fontSize = '20px';
+paragrafo.style.color = '#fff';
+fundoPagina.style.backgroundColor = '#006437'
+fundoData.style.backgroundColor = '#019a55'
