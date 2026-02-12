@@ -3,6 +3,7 @@ const titulo = document.querySelector('.titulo');
 const container = document.querySelector('#container');
 const imagem = document.querySelector('#imagem');
 const botao = document.querySelector('.botao');
+const botao2 = document.querySelector('.botao2');
 
 corpo.style.backgroundColor = '#006437';
 corpo.style.color = 'white';
@@ -25,4 +26,8 @@ imagem.classList.add('imagem');
 let contador = 0;
 botao.addEventListener('click',( ) => {
     alert("Cliquei no botão " + contador++);
+});
+
+botao2.addEventListener('click', ( ) => {
+    alert("AIINNNN");
 });
