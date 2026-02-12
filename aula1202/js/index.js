@@ -22,7 +22,7 @@ imagem.setAttribute('src', './exercicio1/pkirk.jpg');
 imagem.classList.add('imagem');
 
 //eventos
-let contador = 0
+let contador = 0;
 botao.addEventListener('click',( ) => {
-    console.log("Cliquei no botão" + contador++);
+    alert("Cliquei no botão " + contador++);
 });
