@@ -74,10 +74,10 @@ class JogadorBasquete extends Jogador{
         this.#totalCestas = totalCestas;
     };
     arremessar(){
-        return 'O jogador nome ' + super.getNome() + ' e número ' +  super.getNumero() + ' arremessou a bola!';
+        return 'O jogador nome ' + super.getNome() + ' e número ' +  super.getNumero() + ' arremessou a bola e fez um total de ' + this.#totalCestas + ' cestas ';
     };
     fazerEnterrada(){
-        return 'O jogador nome ' + super.getNome() + ' e número ' +  super.getNumero() + ' enterrou a bola!';
+        return 'O jogador nome ' + super.getNome() + ' e número ' +  super.getNumero() + ' saltou ' + this.#alturaSalto + 'cm e enterrou a bola!';
     };
 };
 const jogadorBasquete = new JogadorBasquete(90, 15, 'LeBron James', 23);
