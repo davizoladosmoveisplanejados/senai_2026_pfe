@@ -1,63 +1,105 @@
 body{
-  margin: 0;
-  background: #f4f6f9;
-  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f9;
 }
 
+/* tela */
 .login-page{
-  height: 100vh;
-  width: 100%;
+  height:100vh;
+  width:100%;
 
-  background-image: url("/estacao.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background-image:url("/src/assets/nuvens.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
-.imagem-login{
-  padding: 0;
-}
-
-.imagem-login img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* card login / cadastro */
 .login-card{
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 350px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  width:100%;
+  max-width:380px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* título */
 .login-card h2{
-  font-weight: 600;
+  font-weight:600;
+  text-align:center;
 }
 
+/* inputs */
 .form-control{
-  height: 45px;
+  height:45px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  transition:0.2s;
 }
 
+.form-control:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 0.15rem rgba(37,99,235,0.25);
+}
+
+/* botão */
 .btn{
-  height: 45px;
-  font-weight: 500;
+  height:45px;
+  font-weight:500;
+  border-radius:8px;
+  transition:0.2s;
 }
 
-body{
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 5px 12px rgba(0,0,0,0.15);
+}
+/* ----- header ----- */
+header{
+  width:100%;
+  height:70px;
+  padding:0 40px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  background:rgba(255,255,255,0.95);
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-.login-page{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* título */
+header h2{
+  margin:0;
+  font-size:22px;
+  font-weight:600;
+  color:#1f2937;
+}
 
-  background-image: url("/src/assets/nuvens.jpg");
-  background-size: cover;
-  background-position: center;
+/* menu */
+header nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+}
+
+/* links */
+header nav ul li a{
+  text-decoration:none;
+  font-weight:500;
+  color:#374151;
+  transition:0.2s;
+}
+
+/* hover */
+header nav ul li a:hover{
+  color:#2563eb;
 }
