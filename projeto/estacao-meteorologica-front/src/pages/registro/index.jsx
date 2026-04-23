@@ -38,9 +38,9 @@ export default function Registro() {
               onChange={(e) => setConfirmaSenha(e.target.value)}
             />
 
-            <button to="/dashboard" className="btn btn-primary w-100">
+            <Link to="/dashboard" className="btn btn-primary w-100">
               Cadastrar
-            </button>
+            </Link>
           </form>
         </div>
       </section>

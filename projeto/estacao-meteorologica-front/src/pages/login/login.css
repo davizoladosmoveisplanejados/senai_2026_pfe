@@ -1,7 +1,9 @@
+/* fundo da página (tira o preto atrás) */
 body{
+  background:#f3f4f6;
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:#f4f6f9;
+  height: fit-content;
 }
 
 /* tela */
@@ -63,21 +65,21 @@ body{
 /* ----- header ----- */
 header{
   width:100%;
-  height:70px;
+  min-height:80px;
   padding:0 40px;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  background:rgba(255,255,255,0.95);
+  background:#ffffff;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* título */
 header h2{
   margin:0;
-  font-size:22px;
+  font-size:26px;
   font-weight:600;
   color:#1f2937;
 }
@@ -86,7 +88,7 @@ header h2{
 header nav ul{
   list-style:none;
   display:flex;
-  gap:25px;
+  gap:30px;
   margin:0;
   padding:0;
 }
@@ -94,6 +96,7 @@ header nav ul{
 /* links */
 header nav ul li a{
   text-decoration:none;
+  font-size:16px;
   font-weight:500;
   color:#374151;
   transition:0.2s;
@@ -102,4 +105,214 @@ header nav ul li a{
 /* hover */
 header nav ul li a:hover{
   color:#2563eb;
+}
+
+/* ----- dashboard layout ----- */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:20px;
+  padding:30px 40px;
+}
+
+/* cards de dados */
+.card{
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card h6{
+  margin:0;
+  font-size:14px;
+  color:#6b7280;
+}
+
+.card h2{
+  margin-top:8px;
+  font-size:28px;
+  color:#2563eb;
+  font-weight:600;
+}
+
+/* ----- seção gráficos ----- */
+.graficos{
+  padding:20px 40px;
+}
+
+.graficos h6{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.graficos div{
+  background:white;
+  border-radius:12px;
+  min-height:250px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  padding:20px;
+}
+
+/* seção tabela */
+.tabela{
+  padding:40px;
+}
+
+/* título */
+.tabela h6{
+  font-size:20px;
+  margin-bottom:20px;
+  text-align:center;
+  color:#1f2937;
+}
+
+
+/* tabela */
+.tabela table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* cabeçalho */
+.tabela th{
+  background:#2563eb;
+  color:white;
+  padding:14px;
+  text-align:center;
+  font-weight:600;
+  border-right:1px solid rgba(255,255,255,0.2);
+}
+
+/* remove linha da última coluna */
+.tabela th:last-child{
+  border-right:none;
+}
+
+/* células */
+.tabela td{
+  padding:14px;
+  text-align:center;
+  border-bottom:1px solid #e5e7eb;
+  border-right:1px solid #e5e7eb;
+}
+
+/* remove linha da última coluna */
+.tabela td:last-child{
+  border-right:none;
+}
+
+/* efeito hover */
+.tabela tbody tr:hover{
+  background:#f9fafb;
+}
+
+/* ----- responsividade ----- */
+@media (max-width:768px){
+
+  .cards{
+    padding:20px;
+  }
+
+  .graficos{
+    padding:20px;
+  }
+
+  .tabela{
+    padding:20px;
+  }
+
+  .card h2{
+    font-size:24px;
+  }
+
+}
+/* ----- container da página ----- */
+.container{
+  max-width:600px;
+  margin:40px auto;
+  padding:30px;
+
+  background:white;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* título */
+.container h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#1f2937;
+}
+
+/* formulário */
+.container form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* labels */
+.container label{
+  font-size:14px;
+  color:#374151;
+  margin-top:10px;
+}
+
+/* inputs */
+.container input{
+  padding:12px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  font-size:14px;
+  transition:0.2s;
+}
+
+/* foco */
+.container input:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,0.15);
+}
+
+/* botão */
+.container button{
+  margin-top:20px;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  font-weight:500;
+
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* hover */
+.container button:hover{
+  background:#1d4ed8;
+  transform:translateY(-1px);
+}
+
+/* responsividade */
+@media (max-width:768px){
+
+  .container{
+    margin:20px;
+    padding:20px;
+  }
+
 }
