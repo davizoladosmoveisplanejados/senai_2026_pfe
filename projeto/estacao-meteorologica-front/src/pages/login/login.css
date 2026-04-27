@@ -276,6 +276,7 @@ header nav ul li a:hover{
   border-radius:8px;
   font-size:14px;
   transition:0.2s;
+  background: white;
 }
 
 /* foco */
@@ -313,6 +314,110 @@ header nav ul li a:hover{
   .container{
     margin:20px;
     padding:20px;
+  }
+
+}
+
+/* ----- página relatório ----- */
+.container{
+  max-width:1200px;
+  margin:40px auto;
+  padding:20px;
+}
+
+/* título */
+.container h3{
+  text-align:center;
+  font-size:28px;
+  color:#1f2937;
+  margin-bottom:10px;
+}
+
+/* subtítulo */
+.container p{
+  text-align:center;
+  color:#6b7280;
+  margin-bottom:30px;
+}
+
+/* ----- área de gráficos ----- */
+.graficos{
+  background:white;
+  min-height:300px;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:30px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ----- tabela de leituras ----- */
+.tabela-leituras{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* tabela */
+.tabela-leituras table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+/* cabeçalho */
+.tabela-leituras th{
+  background:#2563eb;
+  color:white;
+  padding:15px;
+  text-align:center;
+  font-weight:600;
+  border-right:1px solid rgba(255,255,255,0.2);
+}
+
+.tabela-leituras th:last-child{
+  border-right:none;
+}
+
+/* células */
+.tabela-leituras td{
+  padding:15px;
+  text-align:center;
+  border-bottom:1px solid #e5e7eb;
+  border-right:1px solid #e5e7eb;
+}
+
+.tabela-leituras td:last-child{
+  border-right:none;
+}
+
+/* hover nas linhas */
+.tabela-leituras tbody tr:hover{
+  background:#f9fafb;
+}
+
+/* última linha sem borda inferior */
+.tabela-leituras tbody tr:last-child td{
+  border-bottom:none;
+}
+
+/* responsividade */
+@media (max-width:768px){
+
+  .container{
+    margin:20px;
+    padding:10px;
+  }
+
+  .container h3{
+    font-size:22px;
+  }
+
+  .tabela-leituras{
+    overflow-x:auto;
+  }
+
+  .tabela-leituras table{
+    min-width:700px;
   }
 
 }
