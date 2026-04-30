@@ -1,6 +1,6 @@
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
-import {Bar} from 'react-chartjs-2';
-import { Faker } from "@faker-js/faker";
+import {Bar, Line} from 'react-chartjs-2';
+import { faker } from "@faker-js/faker";
 
 ChartJS.register(
     CategoryScale,
@@ -12,7 +12,41 @@ ChartJS.register(
 );
 
 export default function GraficoBarra(){
+    
+    const opcoes = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top'
+            },
+            title: {
+                display: true,
+                text: 'Medidas de temperatura por mês'
+            }
+        },
+    }
+
+    const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+    const dados = {
+        labels,
+        datasets: [
+            {
+                label: 'Chuva (mm)',
+                data: labels.map(() => faker.number.int({min: 0, max:100})),
+                backgroundColor: '#2563eb'
+            },
+            {
+                label: 'Temperatura ºC',
+                data: labels.map(() => faker.number.int({min: 10, max:35})),
+                backgroundColor: '#f97316'
+            }
+        ]
+    }
+    
     return(
-        
-    )
-}
+        <>
+            <Bar options={opcoes} data={dados}/>
+        </>
+    );
+};

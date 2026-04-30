@@ -1,3 +1,9 @@
+
+
+/* ESSE CSS É GLOBAL. NÃO É SÓ PRA LOGIN */
+
+
+
 /* fundo da página (tira o preto atrás) */
 body{
   background:#f3f4f6;
@@ -418,6 +424,44 @@ header nav ul li a:hover{
 
   .tabela-leituras table{
     min-width:700px;
+  }
+
+}
+/* ----- área de gráficos ----- */
+.graficos{
+  background:white;
+  border-radius:12px;
+  padding:25px;
+  margin-bottom:30px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+  width:100%;
+  min-height:400px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* canvas do chart */
+.graficos canvas{
+  width:100% !important;
+  max-width:1000px;
+  height:auto !important;
+}
+
+/* responsividade */
+@media (max-width:768px){
+
+  .graficos{
+    padding:15px;
+    min-height:300px;
+    overflow-x:auto;
+  }
+
+  .graficos canvas{
+    min-width:600px;
   }
 
 }
